@@ -141,3 +141,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+/* Reduce dead space between sections */
+.location { padding-top: 32px !important; padding-bottom: 32px !important; }
+.about { padding-top: 48px !important; padding-bottom: 32px !important; }
+footer { padding-top: 24px !important; padding-bottom: 32px !important; }
