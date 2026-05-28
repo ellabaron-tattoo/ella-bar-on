@@ -1,0 +1,143 @@
+/* Ella - Dark Premium Theme Override v2
+   Preserves original "Yael Leibushor" font.
+   CTA buttons get beige gradient like the title.
+*/
+
+:root {
+  --ella-bg-dark: #373532;
+  --ella-text-white: #ffffff;
+  --ella-beige: #F0E8D4;
+  --ella-beige-2: #D4C7A8;
+}
+
+/* Background + base text color (DO NOT override fonts) */
+html, body {
+  background: var(--ella-bg-dark) !important;
+  color: var(--ella-text-white) !important;
+}
+
+body, p, li, span, div {
+  color: var(--ella-text-white) !important;
+}
+
+/* Title in beige gradient - keep original Yael Leibushor font */
+h1, h2, h3, h4, h5, h6,
+.hero-title, .section-title, .cta-modal__title,
+[class*="title"] {
+  background: linear-gradient(135deg, var(--ella-beige) 0%, var(--ella-beige-2) 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+/* Make all sections transparent so dark BG shows */
+section, header, footer, .section, [class*="section"] {
+  background: transparent !important;
+}
+
+/* CTA modal (the existing site's modal, NOT ella-name-modal which has inline styles) */
+.cta-modal, .cta-modal__inner, .cta-modal__card {
+  background: #373532 !important;
+  color: #fff !important;
+  border: 1px solid rgba(240, 232, 212, 0.12);
+}
+
+.cta-modal__sub, [class*="caption"] {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+/* MAIN CTA BUTTONS — beige gradient like the title */
+.cta-main, .cta-float, button.cta-main, button.cta-float,
+.hero-cta, .primary-cta, button.primary {
+  background: linear-gradient(135deg, var(--ella-beige) 0%, var(--ella-beige-2) 100%) !important;
+  color: #1A1A1A !important;
+  border: none !important;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(240, 232, 212, 0.15);
+}
+
+.cta-main:hover, .cta-float:hover, button.cta-main:hover, button.cta-float:hover,
+.hero-cta:hover, .primary-cta:hover, button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(240, 232, 212, 0.28) !important;
+  filter: brightness(1.05);
+}
+
+/* CTA options inside the modal */
+.cta-opt, button.cta-opt {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1.5px solid rgba(240, 232, 212, 0.25) !important;
+  color: #F0E8D4 !important;
+  transition: all 0.2s ease;
+}
+
+.cta-opt:hover, button.cta-opt:hover {
+  background: rgba(240, 232, 212, 0.1) !important;
+  border-color: #F0E8D4 !important;
+  transform: translateY(-1px);
+}
+
+/* Filter buttons (GEOMETRY / FLOW / FREEHAND / ALL) - subtle */
+.filter-btn {
+  color: rgba(240, 232, 212, 0.7) !important;
+  background: transparent !important;
+  border: 1px solid rgba(240, 232, 212, 0.2) !important;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--ella-beige) 0%, var(--ella-beige-2) 100%) !important;
+  color: #1A1A1A !important;
+  border-color: transparent !important;
+}
+
+.filter-btn:hover {
+  color: #F0E8D4 !important;
+  border-color: #F0E8D4 !important;
+}
+
+/* Links */
+a {
+  color: var(--ella-beige) !important;
+}
+
+a:hover {
+  color: #fff !important;
+}
+
+/* Icons should remain visible */
+svg, img { filter: none; }
+
+/* Cards / panels */
+[class*="card"]:not(.cta-modal__card), [class*="panel"], [class*="box"] {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(240, 232, 212, 0.1) !important;
+}
+
+/* Form inputs */
+input, textarea, select {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1.5px solid rgba(240, 232, 212, 0.2) !important;
+  color: #fff !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+input:focus, textarea:focus {
+  border-color: #F0E8D4 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  outline: none !important;
+}
+
+/* Numbers / stats highlights in beige */
+[class*="number"], [class*="stat"], [class*="count"] {
+  color: var(--ella-beige) !important;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
