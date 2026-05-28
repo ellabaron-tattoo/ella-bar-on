@@ -620,5 +620,5 @@ function closeCtaModal(){var m=document.getElementById('ctaModal');if(!m)return;
 document.addEventListener('click',function(e){var b=e.target.closest('.cta-opt');if(!b)return;var msg=b.getAttribute('data-msg')||'';var t=b.querySelector('.cta-opt__title');var lbl=t?t.textContent.trim():'opt';if(window.clarity){clarity('event','cta_whatsapp:'+lbl);}if(window.fbq){fbq('track','Lead',{content_name:lbl,content_category:'whatsapp_cta'});}window.open('https://wa.me/972503088644?text='+encodeURIComponent(msg),'_blank','noopener');closeCtaModal();});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeCtaModal();});
 </script>
-<script src="/ella-attribution-tracker.js" defer></script>
+<script src="ella-attribution-tracker.js" defer></script>
 </body></html>
