@@ -1,4 +1,4 @@
-/* Ella - Dark Premium Theme Override v2
+/* Ella - Dark Premium Theme Override v3
    Preserves original "Yael Leibushor" font.
    CTA buttons get beige gradient like the title.
 */
@@ -10,7 +10,6 @@
   --ella-beige-2: #D4C7A8;
 }
 
-/* Background + base text color (DO NOT override fonts) */
 html, body {
   background: var(--ella-bg-dark) !important;
   color: var(--ella-text-white) !important;
@@ -20,7 +19,6 @@ body, p, li, span, div {
   color: var(--ella-text-white) !important;
 }
 
-/* Title in beige gradient - keep original Yael Leibushor font */
 h1, h2, h3, h4, h5, h6,
 .hero-title, .section-title, .cta-modal__title,
 [class*="title"] {
@@ -31,12 +29,10 @@ h1, h2, h3, h4, h5, h6,
   color: transparent !important;
 }
 
-/* Make all sections transparent so dark BG shows */
 section, header, footer, .section, [class*="section"] {
   background: transparent !important;
 }
 
-/* CTA modal (the existing site's modal, NOT ella-name-modal which has inline styles) */
 .cta-modal, .cta-modal__inner, .cta-modal__card {
   background: #373532 !important;
   color: #fff !important;
@@ -47,7 +43,6 @@ section, header, footer, .section, [class*="section"] {
   color: rgba(255, 255, 255, 0.78) !important;
 }
 
-/* MAIN CTA BUTTONS — beige gradient like the title */
 .cta-main, .cta-float, button.cta-main, button.cta-float,
 .hero-cta, .primary-cta, button.primary {
   background: linear-gradient(135deg, var(--ella-beige) 0%, var(--ella-beige-2) 100%) !important;
@@ -65,7 +60,6 @@ section, header, footer, .section, [class*="section"] {
   filter: brightness(1.05);
 }
 
-/* CTA options inside the modal */
 .cta-opt, button.cta-opt {
   background: rgba(255, 255, 255, 0.05) !important;
   border: 1.5px solid rgba(240, 232, 212, 0.25) !important;
@@ -79,7 +73,6 @@ section, header, footer, .section, [class*="section"] {
   transform: translateY(-1px);
 }
 
-/* Filter buttons (GEOMETRY / FLOW / FREEHAND / ALL) - subtle */
 .filter-btn {
   color: rgba(240, 232, 212, 0.7) !important;
   background: transparent !important;
@@ -97,25 +90,16 @@ section, header, footer, .section, [class*="section"] {
   border-color: #F0E8D4 !important;
 }
 
-/* Links */
-a {
-  color: var(--ella-beige) !important;
-}
+a { color: var(--ella-beige) !important; }
+a:hover { color: #fff !important; }
 
-a:hover {
-  color: #fff !important;
-}
-
-/* Icons should remain visible */
 svg, img { filter: none; }
 
-/* Cards / panels */
 [class*="card"]:not(.cta-modal__card), [class*="panel"], [class*="box"] {
   background: rgba(255, 255, 255, 0.04) !important;
   border: 1px solid rgba(240, 232, 212, 0.1) !important;
 }
 
-/* Form inputs */
 input, textarea, select {
   background: rgba(255, 255, 255, 0.06) !important;
   border: 1.5px solid rgba(240, 232, 212, 0.2) !important;
@@ -132,7 +116,6 @@ input:focus, textarea:focus {
   outline: none !important;
 }
 
-/* Numbers / stats highlights in beige */
 [class*="number"], [class*="stat"], [class*="count"] {
   color: var(--ella-beige) !important;
 }
@@ -142,8 +125,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-/* Reduce dead space between sections */
-.location { padding-top: 32px !important; padding-bottom: 32px !important; }
-.about { padding-top: 48px !important; padding-bottom: 32px !important; }
-footer { padding-top: 24px !important; padding-bottom: 32px !important; }
+/* Popup overrides — dark text on beige background */
+#ella-name-modal-v4 .emb,
+#ella-name-modal-v4 .emb * {
+  color: #1a1a1a !important;
+}
+#ella-name-modal-v4 h3 {
+  color: #1a1a1a !important;
+  background: none !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
+}
+#ella-name-modal-v4 p.sub { color: #5a5550 !important; }
+#ella-name-modal-v4 .img-label { color: #5a5550 !important; background: #fff !important; }
+#ella-name-modal-v4 .img-label:hover { color: #1a1a1a !important; }
+#ella-name-modal-v4 input[type=text] { color: #1a1a1a !important; background: #fff !important; }
+#ella-name-modal-v4 input[type=text]::placeholder { color: #9a948a !important; }
+#ella-name-modal-v4 .ep, #ella-name-modal-v4 .ep:hover { color: #fff !important; background: #1a1a1a !important; }
+#ella-name-modal-v4 .es { color: #5a5550 !important; background: transparent !important; }
+#ella-name-modal-v4 .loading { color: #5a5550 !important; }
